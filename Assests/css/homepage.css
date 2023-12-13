@@ -52,7 +52,8 @@ body {
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    width: 60%;;
+    width: 60%;
+    ;
 }
 
 .centered {
