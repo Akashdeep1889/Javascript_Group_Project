@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Group Project</title>
-    <link rel="stylesheet" href="Assests/css/homepage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="Assests/css/registertion.css">
 </head>
 
 <body>
 
     <div class="transbox">
-        <h1>We welcome you to</h1>
         <h2 class="main-title">Event Booking System</h2>
         <p>A place where everyone gets the desired...</p>
         <div class="button-container">
@@ -22,51 +22,35 @@
         </div>
     </div>
 
-    <div class="perbox">
-        <div class="centered">
-            <h3>Make memories out of events of your life which are never to be
-                forgotten...</h3>
-        </div>
-        <br><br>
-        <div class="expertise-section">
-            <h2>We expertise in...</h2>
-            <div class="slideshow-container">
+    <div class="form-container" id="loginForm">
+        <h2>Login</h2>
+        <form onsubmit="return validateLoginForm()">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
+            <button type="submit">Login</button>
+        </form>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="https://static.toiimg.com/photo/73045588.cms.cms" alt="After party">
-                    <div class="text">After party</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="https://c1.wallpaperflare.com/preview/50/512/980/iocenters-meeting-room-kuwait-city.jpg"
-                        alt="Conference">
-                    <div class="text">Conference</div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="https://media1.fdncms.com/rochester/imager/u/zoom/10563058/choice_event3-7267764c7adb4986.jpg"
-                        alt="Festives">
-                    <div class="text">Festives</div>
-                </div>
-
-            </div>
-            <br>
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-
-        <div class="centered">
-            <h2>Try giving us a chance; we wouldn't disappoint you...</h2>
-        </div>
+        <p class="switch-text">Don't have an account? <a href="#" onclick="switchForm()">Register here</a>.</p>
     </div>
 
-    <script src="Assests/js/homepage-script.js"></script>
+    <div class="form-container" id="registerForm" style="display: none;">
+        <h2>Register</h2>
+        <form onsubmit="return validateRegisterForm()">
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" name="registerUsername" required>
+            <label for="registerEmail">Email:</label>
+            <input type="email" id="registerEmail" name="registerEmail" required>
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="registerPassword" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <p class="switch-text">Already have an account? <a href="#" onclick="switchForm()">Login here</a>.</p>
+    </div>
+
+    <script src="./Assests/js/registeration.js"></script>
 </body>
 
 </html>
